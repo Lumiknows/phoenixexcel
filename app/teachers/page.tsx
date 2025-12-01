@@ -2,7 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import { useState } from "react";
 
 import avatar1 from "@/assets/avatars/craig.jpg";
@@ -11,8 +11,15 @@ import avatar3 from "@/assets/avatars/luis.jpg";
 import avatar4 from "@/assets/avatars/atlas.jpg";
 import avatar5 from "@/assets/avatars/maria.jpg";
 
+interface Teacher {
+  name: string;
+  role: string;
+  img: StaticImageData;
+  bio: string;
+}
+
 export default function Teachers() {
-  const team = [
+  const team: Teacher[] = [
     {
       name: "Craig Martin Liddle",
       role: "President & Owner",
@@ -45,7 +52,7 @@ export default function Teachers() {
     },
   ];
 
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<Teacher | null>(null);
 
   return (
     <>
@@ -90,12 +97,16 @@ export default function Teachers() {
                 transition: "transform 0.2s, box-shadow 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-5px)";
-                e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.12)";
+                (e.currentTarget as HTMLDivElement).style.transform =
+                  "translateY(-5px)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  "0 8px 20px rgba(0,0,0,0.12)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.08)";
+                (e.currentTarget as HTMLDivElement).style.transform =
+                  "translateY(0)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow =
+                  "0 4px 15px rgba(0,0,0,0.08)";
               }}
             >
               <div style={{ textAlign: "center" }}>
