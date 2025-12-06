@@ -85,6 +85,42 @@ export default function About() {
         ))}
       </section>
 
+      {/* NEW SECTION – From the handwritten text */}
+      <section className="bg-gray-50 py-16 px-6 md:px-0">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-extrabold mb-6 text-center">
+            Who We Are
+          </h2>
+
+          <div className="bg-white p-8 rounded-2xl shadow-md space-y-6 text-gray-800 leading-relaxed">
+
+            <p>
+              Phoenix Excel has a proven track record for high standards in both
+              academic achievement and a decrease in negative disruptive behaviors.
+              We align our programs to district-specific curriculum standards and
+              tailor them to meet school district budgets, needs, and desired
+              student outcomes.
+            </p>
+
+            <p>
+              Phoenix Excel is fully accredited, with coursework accepted in the
+              state of Arizona. We focus exclusively on grades K–8, ensuring that
+              every student receives a personalized education plan designed to
+              challenge and support them through their coursework. Our teacher-to-student
+              ratio is 2:12, allowing for smaller class sizes and more individualized
+              instruction.
+            </p>
+
+            <p>
+              Our mission is to support each student in meeting their needs so they
+              can return to their home school and succeed in the least restrictive
+              environment possible.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
