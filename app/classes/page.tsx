@@ -36,7 +36,7 @@ export default function Classes() {
               <div className="mb-4">{cls.icon}</div>
               <h2 className="text-2xl font-semibold mb-2 text-gray-900">{cls.name}</h2>
               <p className="text-gray-600 text-center">
-                Personalized learning and support to help each student thrive.
+                Personalized learning and support to help each student thrive and prosper.
               </p>
             </div>
           ))}
